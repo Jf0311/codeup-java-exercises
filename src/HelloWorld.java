@@ -25,7 +25,7 @@ public class HelloWorld {
 //        System.out.println(myNumber);
 
 //        float myNumber = 3.14; //java: incompatible types: possible lossy conversion from double to float
-//        System.out.println(myNumber);
+//        System.out.println(myNumber); however you can put a 3.13f to make it a float
 
 
 
@@ -38,11 +38,11 @@ public class HelloWorld {
 
 
 //        int x = 5;
-//        System.out.println(x++); this print out 5
+//        System.out.println(x++); this print out 5 it put value first then increments it by one
 //        System.out.println(x);   This print out 6 here
 
 //        int x = 5;
-//        System.out.println(++x); This print out 6
+//        System.out.println(++x); This print out 6 it increments first then add the value
 //        System.out.println(x);  This print out 6
 
 //        class someThingDumb = "donkey"; Cannot do
@@ -79,14 +79,17 @@ public class HelloWorld {
                  System.out.println(x);
          System.out.println(y);
 
-        System.out.println();
+         int myValue = 10000;
+        System.out.println(myValue);
 
-        System.out.println("args = " + Arrays.toString(args));
-        System.out.println("args = " + Arrays.toString(args));
-        System.out.println("HelloWorld.main");
-        System.out.println("y = " + y);
+//    int myMinIntValue = Interger.MIN_VALUE;
+//        System.out.println(myMinIntValue);
+//
+//        int myMAXIntValue = Interger.MAX_VALUE;
+//        System.out.println(myMAXIntValue);
 
 
+        // Last one is a overflow when it goes above
 
 
     }
