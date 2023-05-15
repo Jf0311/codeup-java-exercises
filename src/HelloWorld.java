@@ -1,7 +1,21 @@
-import java.util.Arrays;
+
+import java.util.Scanner;
 
 public class HelloWorld {
     public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        String userInput ;
+
+        System.out.println("Enter Something: ");
+        userInput =sc.nextLine();
+
+
+        System.out.println("You entered:" + userInput);
+
+
+
+
         System.out.println("Hello, World!");
         int myFavoriteNumber = 32;
         System.out.println(myFavoriteNumber);
@@ -82,6 +96,8 @@ public class HelloWorld {
          int myValue = 10000;
         System.out.println(myValue);
 
+        
+         System.out.println("myValue = " + myValue);
 //    int myMinIntValue = Interger.MIN_VALUE;
 //        System.out.println(myMinIntValue);
 //
@@ -90,6 +106,10 @@ public class HelloWorld {
 
 
         // Last one is a overflow when it goes above
+        int num = 6;
+        String yo = "Crazy";
+
+        System.out.printf("Hello there , %s. Nice to meet you. %s",  num,yo);
 
 
     }
