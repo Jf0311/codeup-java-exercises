@@ -116,12 +116,48 @@ For numbers which are multiples of both three and five: print “FizzBuzz”. */
             int cubed = u * u * u ;
             System.out.printf("%-5d | %-5d| %-5d%n", u,squared,cubed);
         }
+
+        //--------------------------------------------------------------
             Scanner sc2 = new Scanner(System.in);
                     int userInputAgain ;
+                    String grade ;
         System.out.println("What is your Score? ");
-        userInputAgain = Integer.parseInt(sc.nextLine());
-        for (int ng = 0; ng <= userInputAgain; ng++ ){
-            System.out.println(ng);
-        }
+        userInputAgain = sc2.nextInt();
+        do {
+
+
+            if (userInputAgain >= 88) {
+                grade = "A";
+            } else if (userInputAgain >= 80) {
+                grade = "B";
+            } else if (userInputAgain >= 67) {
+                grade = "C";
+            } else if (userInputAgain >= 60) {
+                grade = "D";
+            } else {
+                grade = "F";
+            }
+            System.out.printf("Your grade is : %s", grade);
+
+
+
+
+/* The equalsIgnoreCase() method compares two strings, ignoring lower case and upper case differences.
+This method returns true if the strings are equal, and false if not. */
+
+
+            System.out.println("  Do you wish to continue ? (yes/no)");   //
+            String answer = sc2.next();
+//            if (answer.equalsIgnoreCase("yes")){
+//                break;
+            if(answer.equals("no")){
+                break;
+            }
+
+        } while (true);
+        System.out.println("Thank you have a great day ");
+
+
     }
-}
+        }
+
