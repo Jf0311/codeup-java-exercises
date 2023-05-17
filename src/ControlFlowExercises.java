@@ -12,7 +12,7 @@ public class ControlFlowExercises {
 
         int i = 5;
         while (i <= 15){
-            System.out.println(i);
+            System.out.print(i + " ");
             i++;
         }
 
@@ -26,11 +26,15 @@ Create a do-while loop that starts at 2, and displays the number squared on each
                          16
                          256
                          65536     */
-            int  numLoop = 0;
-        do {
-            System.out.println(numLoop);
-            numLoop += 2;
-        } while (numLoop <= 100 );
+//            int  numLoop = 0;
+//        do {
+//            System.out.println(numLoop);
+//            numLoop += 2;
+//        } while (numLoop <= 100 );
+
+        for (int c = 100; c >= -10; c -=5){
+            System.out.println("c = " + c);
+        }
 
         //--------------------------
 
@@ -100,23 +104,30 @@ For numbers which are multiples of both three and five: print “FizzBuzz”. */
               }
               System.out.println(q);
           }
+//---------------------------------
 
         Scanner sc = new Scanner(System.in);
           int userInput ;
-        System.out.println("What Number would you like to go up to ? ");
-        userInput = Integer.parseInt(sc.nextLine());
+        boolean confirm = true;
+          do {
 
-        System.out.println("Here is your table!");
-        System.out.println("Number | squared | cubed");
-        System.out.println("----- | ------ | -----");
+              System.out.println("What Number would you like to go up to ? ");
+              userInput = Integer.parseInt(sc.nextLine());
+
+              System.out.println("Here is your table!");
+              System.out.println("Number | squared | cubed");
+              System.out.println("----- | ------ | -----");
 
 
-        for(int u = 1; u <= userInput; u++){
-            int squared = u * u;
-            int cubed = u * u * u ;
-            System.out.printf("%-5d | %-5d| %-5d%n", u,squared,cubed);
-        }
-
+              for (int u = 1; u <= userInput; u++) {
+                  int squared = u * u;
+                  int cubed = u * u * u;
+                  System.out.printf("%-7d | %-9d| %-6d%n", u, squared, cubed);
+              }
+              System.out.println("Continue [y/n]" );
+             confirm = sc.next().equalsIgnoreCase("y");
+          } while (confirm);
+        System.out.println(" Cool see you next time");
         //--------------------------------------------------------------
             Scanner sc2 = new Scanner(System.in);
                     int userInputAgain ;
