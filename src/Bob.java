@@ -15,7 +15,7 @@ public class Bob {
         Boolean confirm = true;
 
         do {
-            System.out.println("Hi , I am Bob ");
+            System.out.println("Bob : ... ");
             myResponse = sc.nextLine();
 
             if (myResponse.isEmpty()) {
@@ -32,6 +32,8 @@ public class Bob {
         System.out.println("Bob: Bye!");
     }
 }
+
+
 
 
 
