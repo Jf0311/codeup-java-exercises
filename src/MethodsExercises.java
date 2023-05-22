@@ -60,6 +60,9 @@ public class MethodsExercises {
 
 
 
+
+
+
     // Number three exercise ---------------------------------
 
 //    public static long factorial(int min, int max) {
@@ -94,21 +97,21 @@ public class MethodsExercises {
 
     //-------------------- Problem 4 ----------------------------
 
-        public static long dice(int numOne, int numTwo){
-            Scanner scanner = new Scanner(System.in);
-        long userInput;
-
-        do {
-            System.out.printf("Please enter a number between %d and %d",numOne,numTwo);
-            while (!scanner.hasNextInt()) {    //hasNextInt   method returns true if the next token in this scanner's input can be interpreted as an int value
-                System.out.print("Invalid input please try again ");
-                scanner.next();
-            }
-            userInput = scanner.nextInt();
-        } while (userInput < numOne || userInput > numTwo);  // if the loop is outside the range of less than the number or greater than , the loop will continue
-
-        return userInput;
+    private static int rollDice(int numSides) {
+        return (int) (Math.random() * numSides) + 1;
     }
+
+//
+//            do {
+//                System.out.printf("Enter the number of sides for the pair of dice %d", sides);
+//                userInput = scanner.nextInt();
+//                System.out.println(userInput);
+//
+//
+//            }while(userInput == sides);
+//            return userInput;
+//
+//        }
 
 
 
@@ -215,7 +218,27 @@ Hint: recursion might be helpful here!
 
 
 
-        dice(1,12);
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of sides for a pair of dice: ");
+        int numSides = scanner.nextInt();
+
+        boolean playAgain = true;
+        while (playAgain) {
+            System.out.println("Rolling the dice...");
+            int dice1 = rollDice(numSides);
+            int dice2 = rollDice(numSides);
+
+            System.out.println("Dice 1: " + dice1);
+            System.out.println("Dice 2: " + dice2);
+
+            System.out.print("Roll again? (yes/no): ");
+            String choice = scanner.next();
+
+            playAgain = choice.equalsIgnoreCase("yes");
+        }
+
+        System.out.println("Thank you for playing!");
 
 
 
