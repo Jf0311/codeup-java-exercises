@@ -18,7 +18,7 @@ public class MoviesApplication {
         return showMovies(choice);
 
     }
-    getMonkey();
+
 
     //Creates the movie selection menu and returns the number choice
     public static int movieMenu() {
